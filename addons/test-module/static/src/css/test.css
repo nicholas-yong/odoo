@@ -1,0 +1,24 @@
+.o_main_navbar
+{
+    color: red;
+    background-color: royalblue;
+}
+
+.btn-primary
+{
+    background-color: red !important
+}
+
+.btn-success
+{
+    color: red
+}
+.o_form_button_edit
+{
+    background-color: red;
+}
+
+.o_form_button_add
+{
+    background-color: red;
+}

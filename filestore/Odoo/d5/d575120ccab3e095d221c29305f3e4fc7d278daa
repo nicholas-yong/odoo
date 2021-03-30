@@ -1,0 +1,10 @@
+
+.s_text_highlight {
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.s_text_highlight :last-child {
+  margin-bottom: 0;
+}
+

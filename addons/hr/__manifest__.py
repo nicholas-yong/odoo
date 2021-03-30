@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Employees',
+    'name': 'Staff',
     'version': '1.1',
     'category': 'Human Resources/Employees',
     'sequence': 95,

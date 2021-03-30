@@ -1,0 +1,14 @@
+
+.s_features_grid_content {
+  overflow: hidden;
+}
+
+.s_features_grid_content p {
+  margin-bottom: 0;
+}
+
+.s_features_grid_icon {
+  float: left;
+  margin-right: 15px;
+}
+

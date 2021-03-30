@@ -9,6 +9,12 @@ class ApplicantGetRefuseReason(models.TransientModel):
 
     refuse_reason_id = fields.Many2one('hr.applicant.refuse.reason', 'Refuse Reason')
     applicant_ids = fields.Many2many('hr.applicant')
+    send_email = fields.Boolean('Send Email?', default=True)
+    #template_id = fields.Many2one('mail.template', string="Mail Template", 
 
     def action_refuse_reason_apply(self):
+        if self.send_email:
+            template = self.env['mail.template'].search([('model', '=', 'applicant.get.refuse.reason')])
+            self.env['mail.template'].browse(template.id).send_mail(self.id, force_send=True )
+            
         return self.applicant_ids.write({'refuse_reason_id': self.refuse_reason_id.id, 'active': False})

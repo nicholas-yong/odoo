@@ -53,6 +53,11 @@ class HrEmployeeBase(models.AbstractModel):
         ('presence_absent', 'Absent'),
         ('presence_to_define', 'To define'),
         ('presence_undetermined', 'Undetermined')], compute='_compute_presence_icon')
+    staff_type = fields.Selection([
+        ('1', 'Volunteer'),
+        ('2', 'Intern'),
+        ('3', 'Employee'),
+        ('4', 'Contractor')], string="Staff Type", help="Please select Employement Type", default="1", required=True)
 
     @api.depends('user_id.im_status')
     def _compute_presence_state(self):
@@ -153,6 +158,9 @@ class HrEmployeeBase(models.AbstractModel):
                     # We don't want non-user employee to have icon.
                     icon = 'presence_undetermined'
             employee.hr_icon_display = icon
+
+    def onchange(self, values, field_name, field_onchange):
+        return super().onchange(values, field_name, field_onchange)
 
     @api.model
     def _get_employee_working_now(self):

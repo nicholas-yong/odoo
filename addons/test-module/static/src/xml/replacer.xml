@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-extend="UserMenu.Actions">
+        <t t-jquery="a[data-menu='documentation']" t-operation="before">
+        <a role="menuitem" href="#" data-menu="debug" class="dropdown-item">Activate the developer mode</a>
+        </t>
+    </t>
+</templates>
+

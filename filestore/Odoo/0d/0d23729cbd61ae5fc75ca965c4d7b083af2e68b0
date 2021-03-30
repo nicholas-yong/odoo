@@ -1,0 +1,49 @@
+
+.s_google_map {
+  position: relative;
+  min-height: 100px;
+}
+
+.s_google_map .map_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.s_google_map .description {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  padding: 0 1em;
+  background: rgba(58, 173, 170, 0.8);
+  color: #212529;
+  transition: background-color 250ms ease;
+}
+
+.s_google_map .description font {
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.s_google_map .description span {
+  float: left;
+  text-transform: none;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.s_google_map:hover .description {
+  background: #3aadaa;
+  background: rgba(58, 173, 170, 0.55);
+  color: #212529;
+}
+

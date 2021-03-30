@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('settings')]" position="inside">
                 <div class="app_settings_block" data-string="Employees" string="Employees" data-key="hr" groups="hr.group_hr_manager">
-                    <h2>Employees</h2>
+                    <h2>Staff</h2>
                     <div class="row mt16 o_settings_container" name="employees_setting_container">
                         <div class="col-12 col-lg-6 o_setting_box" id="presence_control_setting" title="Presence of employees">
 

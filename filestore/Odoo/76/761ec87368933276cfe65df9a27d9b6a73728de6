@@ -1,0 +1,5 @@
+
+a.o_wait_lazy_js[href], .o_wait_lazy_js a[href], button.o_wait_lazy_js, .o_wait_lazy_js button, input.o_wait_lazy_js[type="submit"], .o_wait_lazy_js input[type="submit"], input.o_wait_lazy_js[type="button"], .o_wait_lazy_js input[type="button"], .btn.o_wait_lazy_js, .o_wait_lazy_js .btn {
+  pointer-events: none;
+}
+

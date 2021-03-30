@@ -1,0 +1,26 @@
+
+.s_product_catalog[data-vcss='001'] .s_product_catalog_dish .s_product_catalog_dish_title {
+  line-height: 1.2;
+}
+
+.s_product_catalog[data-vcss='001'] .s_product_catalog_dish .s_product_catalog_dish_description {
+  margin-bottom: 1rem;
+}
+
+.s_product_catalog[data-vcss='001'] .s_product_catalog_dish:last-child .s_product_catalog_dish_description {
+  margin-bottom: 0;
+}
+
+.s_product_catalog[data-vcss='001'] .s_product_catalog_dish .s_product_catalog_dish_dot_leaders {
+  display: -webkit-box; display: -webkit-flex; display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.s_product_catalog[data-vcss='001'] .s_product_catalog_dish .s_product_catalog_dish_dot_leaders::after {
+  content: '';
+  margin-left: 0.5rem;
+  -webkit-box-flex: 1; -webkit-flex: 1 0 auto; flex: 1 0 auto;
+  border-bottom: 1px dotted;
+}
+

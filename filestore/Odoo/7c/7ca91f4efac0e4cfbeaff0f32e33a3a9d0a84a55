@@ -1,0 +1,35 @@
+
+.s_alert {
+  margin: 15px 0;
+  border: 1px solid;
+  border-radius: 0.25rem;
+}
+
+.s_alert p:last-child, .s_alert ul:last-child, .s_alert ol:last-child {
+  margin-bottom: 0;
+}
+
+.s_alert_sm {
+  padding: 10px;
+  font-size: 0.75rem;
+}
+
+.s_alert_md {
+  padding: 15px;
+  font-size: 1rem;
+}
+
+.s_alert_lg {
+  padding: 30px;
+  font-size: 1.25rem;
+}
+
+.s_alert_icon {
+  float: left;
+  margin-right: 10px;
+}
+
+.s_alert_content {
+  overflow: hidden;
+}
+

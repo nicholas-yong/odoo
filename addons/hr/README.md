@@ -1,7 +1,7 @@
 Odoo Human Resources
 --------------------
 
-With Odoo <a href="https://www.odoo.com/page/employees">Human Resources</a>,
+With Odoo <a href="https://www.odoo.com/page/Staff">Human Resources</a>,
 manage the most important asset in your company: People
 
 Get all your HR operations managed easily: knowledge sharing, recruitments,
@@ -9,7 +9,7 @@ appraisals, timesheets, contracts, attendances, payroll, etc.
 
 Each need is provided by a specific app that you activate on demand.
 
-Manage Your Employees
+Manage Your Staff
 ---------------------
 
 Oversee all important information in your company address book. Some
@@ -21,7 +21,7 @@ Record employee contracts and get alerts when they have to be renewed.
 Streamline Your Recruitment Process
 -----------------------------------
 
-Index resumes, track applicants, search profiles with <a href="https://www.odoo.com/page/employees">Odoo HR</a>.
+Index resumes, track applicants, search profiles with <a href="https://www.odoo.com/page/Staff">Odoo HR</a>.
 
 Post job offers and keep track of each application received. Follow applicants
 in your recruitment process with the smart kanban view.
@@ -33,7 +33,7 @@ Enterprise Social Network
 -------------------------
 
 Break down information silos. Share knowledge and best practices amongst all
-employees. Follow specific people or documents and join groups of interests to
+Staff. Follow specific people or documents and join groups of interests to
 share expertise and documents.
 
 Interact with your coworkers in real time with website live chat.
@@ -48,7 +48,7 @@ posted automatically based on time spent on your projects.
 Time Off Management
 -----------------
 
-Keep track of the vacation days accrued by each employee. Employees enter their
+Keep track of the vacation days accrued by each employee. Staff enter their
 requests (paid time off, sick time off, etc), for managers to approve and
 validate. It's all done in just a few clicks. The agenda of each employee is
 updated accordingly.
@@ -58,13 +58,13 @@ Keep Track of Employee Expenses
 
 Get rid of the paper work and follow employee's expenses directly in Odoo.
 Don't loose time or money by controlling the full flow: expense validation,
-reimbursement of employees, posting in the accounting and re-invoicing to
+reimbursement of Staff, posting in the accounting and re-invoicing to
 customers.
 
 Follow Periodic Appraisals
 --------------------------
 
-Set-up appraisals plans and/or surveys for your employees and watch their
+Set-up appraisals plans and/or surveys for your Staff and watch their
 evolution. Define steps for interviews and Odoo will notify managers or
 subordinates automatically to prepare appraisals. Keep track of the progress of
 your staff periodically.

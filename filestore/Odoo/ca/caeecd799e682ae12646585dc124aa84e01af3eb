@@ -1,0 +1,9 @@
+
+.o_ThreadIcon_leaveOnline {
+  color: #00A09D;
+}
+
+.o_ThreadIcon_leaveOffline {
+  color: #ffc107;
+}
+

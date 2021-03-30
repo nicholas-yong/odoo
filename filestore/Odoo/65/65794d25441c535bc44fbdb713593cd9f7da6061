@@ -1,0 +1,208 @@
+
+.o_editable.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child, .o_editable[data-oe-type=html] > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child, .o_editable .oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child, #wrap.o_editable.oe_structure.oe_empty:empty, #wrap.o_editable.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child, #wrap.o_editable[data-oe-type=html]:empty, #wrap.o_editable[data-oe-type=html] > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child, .o_editable #wrap.oe_structure.oe_empty:empty, .o_editable #wrap.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child {
+  width: 96%;
+  margin: 20px 2%;
+  border: 2px dashed #999999;
+  padding: 12px 0px;
+  text-align: center;
+  color: #999999;
+}
+
+.o_editable.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:before, .o_editable[data-oe-type=html] > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:before, .o_editable .oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:before, #wrap.o_editable.oe_structure.oe_empty:empty:before, #wrap.o_editable.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:before, #wrap.o_editable[data-oe-type=html]:empty:before, #wrap.o_editable[data-oe-type=html] > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:before, .o_editable #wrap.oe_structure.oe_empty:empty:before, .o_editable #wrap.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:before {
+  content: attr(data-editor-message);
+  display: block;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.o_editable.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:after, .o_editable[data-oe-type=html] > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:after, .o_editable .oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:after, #wrap.o_editable.oe_structure.oe_empty:empty:after, #wrap.o_editable.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:after, #wrap.o_editable[data-oe-type=html]:empty:after, #wrap.o_editable[data-oe-type=html] > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:after, .o_editable #wrap.oe_structure.oe_empty:empty:after, .o_editable #wrap.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child:after {
+  content: attr(data-editor-sub-message);
+  display: block;
+}
+
+.o_we_snippet_area_animation {
+  animation-delay: 999ms;
+}
+
+.o_we_snippet_area_animation::before {
+  animation: inherit;
+  animation-delay: 0ms;
+}
+
+.o_editable {
+  /* Summernote not Support for placeholder text https://github.com/summernote/summernote/issues/581 */
+}
+
+.o_editable:not(:empty):not([data-oe-model="ir.ui.view"]):not([data-oe-type="html"]):not(.o_editable_no_shadow):not([data-oe-type="image"]):hover, .o_editable.o_editable_date_field_linked:not(:empty), .o_editable[data-oe-type]:not([data-oe-model="ir.ui.view"]):not([data-oe-type="html"]):not(.o_editable_no_shadow):not([data-oe-type="image"]):hover, .o_editable.o_editable_date_field_linked[data-oe-type] {
+  box-shadow: #7C7BAD 0 0 5px 2px inset;
+}
+
+.o_editable[data-oe-type="image"]:not(:empty):not(.o_editable_no_shadow):hover, .o_editable[data-oe-type][data-oe-type="image"]:not(.o_editable_no_shadow):hover {
+  position: relative;
+}
+
+.o_editable[data-oe-type="image"]:not(:empty):not(.o_editable_no_shadow):hover:after, .o_editable[data-oe-type][data-oe-type="image"]:not(.o_editable_no_shadow):hover:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: #7C7BAD 0 0 5px 2px inset;
+}
+
+.o_editable:focus, .o_editable[data-oe-type] {
+  min-height: 0.8em;
+  min-width: 8px;
+}
+
+#o_footer_scrolltop_wrapper.o_editable:focus, #o_footer_scrolltop_wrapper.o_editable[data-oe-type] {
+  min-height: 0;
+  min-width: 0;
+}
+
+.o_editable.o_is_inline_editable {
+  display: inline-block;
+}
+
+.o_editable .btn, .o_editable.btn {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  cursor: text !important;
+}
+
+.o_editable[placeholder]:empty:not(:focus):before {
+  content: attr(placeholder);
+  opacity: 0.3;
+}
+
+#wrap.o_editable.oe_structure.oe_empty:empty, #wrap.o_editable.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child, #wrap.o_editable[data-oe-type=html]:empty, #wrap.o_editable[data-oe-type=html] > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child, .o_editable #wrap.oe_structure.oe_empty:empty, .o_editable #wrap.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child {
+  padding: 112px 0px;
+}
+
+.o_editable.oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child, .o_editable[data-oe-type=html] > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child, .o_editable .oe_structure.oe_empty > .oe_drop_zone.oe_insert:not(.oe_vertical):only-child {
+  height: auto;
+  color: #7C7BAD;
+}
+
+.o_editable.oe_structure.oe_empty > p:empty:only-child, .o_editable[data-oe-type=html] > p:empty:only-child, .o_editable .oe_structure.oe_empty > p:empty:only-child {
+  color: #aaa;
+}
+
+.editor_enable [data-oe-readonly]:hover {
+  cursor: default;
+}
+
+.oe_structure_solo > .oe_drop_zone {
+  transform: translateY(10px);
+}
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  user-select: none;
+}
+
+.oe_editable:focus,
+.css_editable_hidden,
+.editor_enable .css_editable_mode_hidden {
+  outline: none !important;
+}
+
+.editor_enable .css_non_editable_mode_hidden,
+.o_editable .media_iframe_video .css_editable_mode_display {
+  display: block !important;
+}
+
+.editor_enable .oe_no_empty[data-oe-type=html]:empty {
+  height: 16px !important;
+}
+
+table.editorbar-panel {
+  cursor: pointer;
+  width: 100%;
+}
+
+table.editorbar-panel td {
+  border: 1px solid #aaa;
+}
+
+table.editorbar-panel td.selected {
+  background-color: #b1c9d9;
+}
+
+.link-style .dropdown > .btn {
+  min-width: 160px;
+}
+
+.link-style .link-style {
+  display: none;
+}
+
+.link-style li {
+  text-align: center;
+}
+
+.link-style li label {
+  width: 100px;
+  margin: 0 5px;
+}
+
+.link-style .col-md-2 > * {
+  line-height: 2em;
+}
+
+.note-editable .fa {
+  cursor: pointer;
+}
+
+.parallax .oe_structure > .oe_drop_zone:first-child {
+  top: 16px;
+}
+
+.parallax .oe_structure > .oe_drop_zone:last-child {
+  bottom: 16px;
+}
+
+.editor_enable .o_add_language {
+  display: none !important;
+}
+
+.editor_enable .o_facebook_page:not(.o_facebook_preview) iframe {
+  pointer-events: none;
+}
+
+.editor_enable .o_facebook_page:not(.o_facebook_preview) .o_facebook_alert .o_add_facebook_page {
+  cursor: pointer;
+}
+
+body.editor_enable.editor_has_snippets {
+  padding-top: 0 !important;
+}
+
+body.editor_enable.editor_has_snippets .s_popup .modal {
+  background-color: transparent;
+}
+
+body.editor_enable.editor_has_snippets .s_popup .modal.fade .modal-dialog {
+  transform: none;
+}
+
+body.editor_enable.editor_has_snippets #oe_main_menu_navbar + #wrapwrap .o_header_affixed {
+  top: 0;
+}
+
+.editor_has_snippets .o_header_affixed {
+  right: 291px !important;
+}
+
+body.editor_enable .s_dynamic > * {
+  pointer-events: none;
+}
+
+body.editor_enable .s_dynamic [data-url] {
+  cursor: inherit;
+}

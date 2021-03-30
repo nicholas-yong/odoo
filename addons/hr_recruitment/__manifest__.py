@@ -17,6 +17,7 @@
         'attachment_indexation',
         'web_tour',
         'digest',
+        'mail',
     ],
     'data': [
         'security/hr_recruitment_security.xml',
@@ -31,6 +32,7 @@
         'views/hr_job_views.xml',
         'views/mail_activity_views.xml',
         'views/digest_views.xml',
+        'views/mail_templates.xml',
         'wizard/applicant_refuse_reason_views.xml',
     ],
     'demo': [

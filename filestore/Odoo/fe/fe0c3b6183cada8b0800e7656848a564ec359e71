@@ -1,0 +1,71 @@
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_navbar_sticky.s_table_of_content_horizontal_navbar, .s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_navbar_sticky.s_table_of_content_vertical_navbar .s_table_of_content_navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  left: auto;
+  bottom: auto;
+  right: auto;
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap:not(.s_table_of_content_navbar_sticky), .s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap:not(.s_table_of_content_navbar_sticky) .s_table_of_content_navbar {
+  top: 0px !important;
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_vertical_navbar .s_table_of_content_navbar > a.list-group-item-action {
+  background: none;
+  color: inherit;
+  opacity: 0.7;
+  font-weight: 500;
+  padding-left: 3px;
+  transition: padding 0.1s;
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_vertical_navbar .s_table_of_content_navbar > a.list-group-item-action:before {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  bottom: 10px;
+  right: auto;
+  width: 2px;
+  content: "";
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_vertical_navbar .s_table_of_content_navbar > a.list-group-item-action:hover {
+  opacity: 1;
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_vertical_navbar .s_table_of_content_navbar > a.list-group-item-action:focus {
+  background: none;
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_vertical_navbar .s_table_of_content_navbar > a.list-group-item-action.active {
+  background: none;
+  padding-left: 8px;
+  opacity: 1;
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_vertical_navbar .s_table_of_content_navbar > a.list-group-item-action.active:before {
+  background-color: #3aadaa;
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_horizontal_navbar {
+  z-index: 1;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_horizontal_navbar .s_table_of_content_navbar {
+  display: inline;
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_horizontal_navbar .s_table_of_content_navbar > a.list-group-item-action {
+  width: auto;
+}
+
+.s_table_of_content:not([data-vcss]) .s_table_of_content_navbar_wrap.s_table_of_content_horizontal_navbar .s_table_of_content_navbar > a.list-group-item {
+  display: inline-block;
+  margin-bottom: 2px;
+}
+

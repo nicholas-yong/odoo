@@ -9,7 +9,7 @@
     'summary': 'Purchase orders, tenders and agreements',
     'description': "",
     'website': 'https://www.odoo.com/page/purchase',
-    'depends': ['account'],
+    'depends': ['account', 'stock', 'point_of_sale'],
     'data': [
         'security/purchase_security.xml',
         'security/ir.model.access.csv',

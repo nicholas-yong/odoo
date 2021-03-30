@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <record id="school_form_view" model="ir.ui.view">
+        <field name="name"> School New </field>
+        <field name="model">school</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name"/>
+                <field name="roll_number"/>
+                <field name="division"/>
+            </form>
+        </field>
+    </record>
+
+        <record id = 'school_action_new' model = 'ir.actions.act_window'>
+        <field name ='name'> school new </field>
+        <field name = 'res_model'>school</field>
+        <field name = 'view_mode'>form</field>
+        </record> 
+
+        <template id = "assets_backend" name = "test" inherit_id = "web.assets_common">
+            <xpath expr="." position="inside">
+                <link rel = "stylesheet" href = "test-module/static/src/css/test.css"/>
+            </xpath>
+        </template>
+        
+        <menuitem
+        name = 'School'
+        id = 'School_Menu'/>
+    <menuitem
+        name = 'Classroom'
+        id = 'Classroom_Menu'
+        parent = 'School_Menu'
+        action = 'school_action_new'/>
+    
+</odoo>

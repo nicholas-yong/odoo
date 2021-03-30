@@ -1,0 +1,31 @@
+
+.s_color_blocks_2.o_half_screen_height > :first-child, .s_color_blocks_2.cover_mid > :first-child, .s_color_blocks_2.o_half_screen_height > :first-child > .row, .s_color_blocks_2.cover_mid > :first-child > .row, .s_color_blocks_2.o_full_screen_height > :first-child, .s_color_blocks_2.cover_full > :first-child, .s_color_blocks_2.o_full_screen_height > :first-child > .row, .s_color_blocks_2.cover_full > :first-child > .row {
+  min-height: inherit;
+}
+
+.s_color_blocks_2 .row {
+  display: -webkit-box; display: -webkit-flex; display: flex;
+  -webkit-flex-flow: row wrap; flex-flow: row wrap;
+}
+
+.s_color_blocks_2 .row::before, .s_color_blocks_2 .row::after {
+  width: 0;
+}
+
+.s_color_blocks_2 [class*="col-lg-"] {
+  padding: 8% 5%;
+  padding-top: 8vw;
+  padding-bottom: 8vw;
+}
+
+@media (max-width: 991.98px) {
+  .s_color_blocks_2 [class*="col-lg-"] {
+    flex: 1 1 100%;
+  }
+}
+
+.s_color_blocks_2 img {
+  max-width: 100%;
+  height: auto;
+}
+

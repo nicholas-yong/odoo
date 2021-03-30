@@ -1,0 +1,84 @@
+
+.s_blockquote {
+  border: 0;
+  padding: 0;
+}
+
+.s_blockquote .s_blockquote_icon {
+  font-size: 1rem;
+}
+
+.s_blockquote .s_blockquote_author {
+  opacity: .75;
+}
+
+.s_blockquote.s_blockquote_classic .s_blockquote_icon {
+  float: left;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.s_blockquote.s_blockquote_classic .s_blockquote_icon.float-right {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.s_blockquote.s_blockquote_classic .s_blockquote_content {
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.s_blockquote.s_blockquote_classic .s_blockquote_content .blockquote-footer::before {
+  content: '';
+}
+
+.s_blockquote.s_blockquote_classic .s_blockquote_content .blockquote-footer .s_blockquote_avatar {
+  max-height: 2.5rem;
+}
+
+.s_blockquote.s_blockquote_cover {
+  text-align: center;
+}
+
+.s_blockquote.s_blockquote_cover .s_blockquote_icon {
+  position: relative;
+  z-index: 1;
+  float: none;
+  margin-bottom: -1.5rem;
+}
+
+.s_blockquote.s_blockquote_cover p:last-of-type {
+  margin-bottom: 0.5rem;
+}
+
+.s_blockquote.s_blockquote_cover .s_blockquote_content, .s_blockquote.s_blockquote_cover .s_blockquote_filter {
+  padding: 3rem 2rem 2rem;
+}
+
+.s_blockquote.s_blockquote_cover .s_blockquote_filter {
+  margin: -3rem -2rem -2rem;
+}
+
+.s_blockquote.s_blockquote_cover .quote_char {
+  margin: 2rem 0 1rem 0;
+}
+
+.s_blockquote.s_blockquote_cover .quote_char ~ .blockquote-footer {
+  padding-bottom: 2rem;
+}
+
+.s_blockquote.s_blockquote_minimalist {
+  border-left: 5px solid;
+  border-color: #7c6576;
+}
+
+.s_blockquote.s_blockquote_minimalist .s_blockquote_content {
+  padding: 1rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.s_blockquote.s_blockquote_minimalist .s_blockquote_content p:last-of-type {
+  margin-bottom: 0;
+}
+

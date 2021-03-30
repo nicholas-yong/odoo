@@ -8,9 +8,10 @@
                     <group class="oe_title">
                         <field name="refuse_reason_id"/>
                         <field name="applicant_ids" invisible="1"/>
+                        <field name = "send_email"/>
                     </group>
                     <footer>
-                        <button name="action_refuse_reason_apply" string="Submit" type="object" class="btn-primary"/>
+                        <button name="action_refuse_reason_apply" string="Submits" type="object" class="btn-primary"/>
                         <button string="Cancel" class="btn-secondary" special="cancel"/>
                     </footer>
                 </form>

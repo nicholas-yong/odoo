@@ -1,0 +1,7 @@
+
+.s_masonry_block[data-vcss='001'] .row > div {
+  display: -webkit-box; display: -webkit-flex; display: flex;
+  -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; flex-direction: column;
+  justify-content: center;
+}
+

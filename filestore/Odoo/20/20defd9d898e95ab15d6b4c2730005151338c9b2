@@ -1,0 +1,11 @@
+
+.s_dynamic .carousel-control-prev, .s_dynamic .carousel-control-next {
+  position: absolute;
+  width: 4rem;
+}
+
+.s_dynamic .carousel-control-prev > span.fa, .s_dynamic .carousel-control-next > span.fa {
+  color: #495057;
+  background: radial-gradient(#FFFFFF 50%, transparent 50%);
+}
+

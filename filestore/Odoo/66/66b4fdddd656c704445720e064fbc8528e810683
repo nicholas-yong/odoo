@@ -1,0 +1,28 @@
+
+.o_newsletter_modal .modal-header {
+  padding: 0;
+  border: none;
+}
+
+.o_newsletter_modal .modal-title {
+  display: none;
+}
+
+.o_newsletter_modal .close {
+  z-index: 1050;
+  position: absolute;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF !important;
+  color: #3aadaa;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  opacity: 1;
+}
+

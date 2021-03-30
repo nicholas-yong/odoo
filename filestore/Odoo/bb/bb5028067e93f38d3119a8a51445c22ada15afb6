@@ -1,0 +1,9 @@
+
+.s_card {
+  margin: 15px 0;
+}
+
+.s_card .card-body p:last-child, .s_card .card-body ul:last-child, .s_card .card-body ol:last-child {
+  margin-bottom: 0;
+}
+

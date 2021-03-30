@@ -1,0 +1,9 @@
+
+.o_PartnerImStatusIcon_icon.o-leave-online {
+  color: #00A09D;
+}
+
+.o_PartnerImStatusIcon_icon.o-leave-offline {
+  color: #ffc107;
+}
+

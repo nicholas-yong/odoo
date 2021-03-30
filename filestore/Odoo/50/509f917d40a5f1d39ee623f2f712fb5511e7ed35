@@ -1,0 +1,36 @@
+
+.s_faq_collapse .accordion .card .card-header {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  padding: .5em 0;
+  border-radius: 0;
+  outline: none;
+}
+
+.s_faq_collapse .accordion .card .card-header:before {
+  content: '\f056';
+  font-family: 'FontAwesome';
+  display: inline-block;
+  margin: 0 .5em 0 .75em;
+  color: #6C757D;
+}
+
+.s_faq_collapse .accordion .card .card-header.collapsed:before {
+  content: '\f055';
+  font-family: 'FontAwesome';
+}
+
+.s_faq_collapse .accordion .card .card-header:hover, .s_faq_collapse .accordion .card .card-header:focus {
+  text-decoration: none;
+}
+
+.s_faq_collapse .accordion .card .card-body {
+  padding: 1em 2.25em;
+}
+
+.s_faq_collapse .card-body p:last-child,
+.s_faq_collapse .card-body ul:last-child {
+  margin-bottom: 0;
+}
+

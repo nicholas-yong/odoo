@@ -1,0 +1,12 @@
+
+.s_badge {
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.s_badge .fa {
+  margin: 0 0.3rem 0 0;
+}
+
