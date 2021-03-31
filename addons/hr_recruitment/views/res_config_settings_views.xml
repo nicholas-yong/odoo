@@ -39,6 +39,7 @@
                                     <div class="content-group" id="interview_forms"/>
                                 </div>
                             </div>
+                            <!---
                              <div class="col-12 col-lg-6 o_setting_box"
                                 id="application_process_setting"
                                 title="Automatically send an email when moving an applicant in between application stages">
@@ -53,6 +54,7 @@
                                     <div class="content-group" id="interview_forms"/>
                                 </div>
                             </div>
+                              -->
                         </div>
                     </div>
                 </xpath>

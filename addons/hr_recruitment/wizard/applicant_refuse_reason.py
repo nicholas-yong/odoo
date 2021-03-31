@@ -14,7 +14,7 @@ class ApplicantGetRefuseReason(models.TransientModel):
 
     def action_refuse_reason_apply(self):
         if self.send_email:
-            template = self.env['mail.template'].search([('model', '=', 'applicant.get.refuse.reason')])
-            self.env['mail.template'].browse(template.id).send_mail(self.id, force_send=True )
+            template = self.env['mail.template'].search([('name', '=', 'Applicant: Refuse')])
+            self.applicant_ids.env['mail.template'].browse(template.id).send_mail(self.applicant_ids.id, force_send=True )
             
         return self.applicant_ids.write({'refuse_reason_id': self.refuse_reason_id.id, 'active': False})

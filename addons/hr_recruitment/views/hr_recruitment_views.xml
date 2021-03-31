@@ -870,35 +870,6 @@ action = act
             action="hr_recruitment_degree_action"
             sequence="5" groups="base.group_no_one"/>
 
-    <!-- Mail Composition Windows when switching through applicant stages-->
-  
-
-    <record id="hr_applicant_compose_action_form" model="ir.ui.view">
-        <field name="name">hr.applicant.compose.form.view</field>
-        <field name="model">hr.applicant.compose</field>
-        <field name="arch" type="xml">
-            <form>
-                <group>
-                    <field name="applicant_id" invisible="True"/>
-                    <field name="email"/>
-                    <field name="subject"/>
-                </group>
-                <field name="body" widget="html"/>
-                <footer>
-                    <button string="Send" name="send_reply" type="object" class="btn-primary"/>
-                    <button string="Cancel" class="btn-default" special="cancel"/>
-                </footer>
-            </form>
-        </field>
-    </record>
-
-    <record id="hr_applicant_compose_compose_action" model="ir.actions.act_window">
-        <field name="name">Application Stage Compose</field>
-        <field name="res_model">hr.applicant.compose</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="view_mode">form</field>
-        <field name="target">new</field>
-    </record>
 
     <!-- Source Tree View -->
     <record model="ir.ui.view" id="hr_recruitment_source_tree">
