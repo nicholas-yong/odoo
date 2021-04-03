@@ -8,12 +8,14 @@
                 <form>
                     <sheet>
                         <group>
-                            <field name="plan_id"/>
+                            <field name="plan_id"  domain = "[('staff_type', '=', employee_id_staff_type)]" options = "{'no_create_edit': True, 'no_create': True}"/>
                             <field name="employee_id" invisible="1"/>
+                            <field name="employee_id_staff_type" invisible="1"/>
+                            <field name="is_button_visible" invisible="1"/>
                         </group>
                     </sheet>
                     <footer>
-                        <button name="action_launch" string="Launch Plan" type="object" class="oe_highlight" groups="hr.group_hr_manager"/>
+                        <button name="action_launch" string="Launch Plan" type="object" class="oe_highlight" groups="hr.group_hr_manager" attrs = "{'invisible' : [('is_button_visible', '=', False)]}"/>
                         <button string="Cancel" class="btn-secondary" special="cancel"/>
                     </footer>
                 </form>

@@ -36,7 +36,9 @@
                             <h1>
                                 <field name="name"/>
                             </h1>
-                            <field name ="plan_staff_type"/>
+                            <h2>
+                            <field name ="staff_type"/>
+                            </h2>
                         </div>
                         <group string="Activities">
                             <field name="active" invisible="1"/>

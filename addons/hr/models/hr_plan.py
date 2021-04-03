@@ -58,11 +58,14 @@ class HrPlanActivityType(models.Model):
 class HrPlan(models.Model):
     _name = 'hr.plan'
     _description = 'plan'
-    _inherits = { 'hr.employee.base' : 'staff_type' }
 
     name = fields.Char('Name', required=True)
     plan_activity_type_ids = fields.Many2many('hr.plan.activity.type', string='Activities')
     active = fields.Boolean(default=True)
-    plan_staff_type = fields.Many2one('hr.employee.base.staff_type', string='plan_staff_type')
+    staff_type = fields.Selection([
+        ('1', 'Volunteer'),
+        ('2', 'Intern'),
+        ('3', 'Employee'),
+        ('4', 'Contractor')], string="Staff Type", help="Please select Employement Type for HR Plan", default="1", required=True)
 
 
