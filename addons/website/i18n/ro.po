@@ -376,7 +376,7 @@ msgstr ""
 #: code:addons/website/static/src/js/tours/tour_utils.js:0
 #, python-format
 msgid "<b>Click on a text</b> to start editing it."
-msgstr ""
+msgstr "<b>Click pe un text</b> pentru a începe editarea."
 
 #. module: website
 #. openerp-web
@@ -407,9 +407,7 @@ msgstr "<b>Click</b> pe acest antet pentru a-l configura."
 #. openerp-web
 #: code:addons/website/static/src/js/tours/tour_utils.js:0
 #, python-format
-msgid ""
-"<b>Click</b> on this option to change the ${optionTooltipLabel} of the "
-"block."
+msgid "<b>Click</b> on this option to change the %s of the block."
 msgstr ""
 
 #. module: website
@@ -467,21 +465,21 @@ msgstr ""
 #. openerp-web
 #: code:addons/website/static/src/js/tours/tour_utils.js:0
 #, python-format
-msgid "<b>Select</b> a ${optionTooltipLabel}."
-msgstr ""
+msgid "<b>Select</b> a %s."
+msgstr "<b>Selectați </b> un/o %s."
 
 #. module: website
 #. openerp-web
 #: code:addons/website/static/src/js/tours/tour_utils.js:0
 #, python-format
 msgid "<b>Select</b> a Color Palette."
-msgstr ""
+msgstr "<b>Selectați</b> o paletă de culori."
 
 #. module: website
 #. openerp-web
 #: code:addons/website/static/src/js/tours/tour_utils.js:0
 #, python-format
-msgid "<b>Slide</b> this button to change the ${direction} padding"
+msgid "<b>Slide</b> this button to change the %s padding"
 msgstr ""
 
 #. module: website
@@ -1784,6 +1782,13 @@ msgid "Building blocks system"
 msgstr ""
 
 #. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/theme_preview.xml:0
+#, python-format
+msgid "Building your website..."
+msgstr "Construirea site-ului dvs. web ..."
+
+#. module: website
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 #: model_terms:website.page,arch_db:website.bs_debug_page
 msgid "Button"
@@ -3059,7 +3064,7 @@ msgstr "Trageți un alt bloc în pagina ta, sub copertă."
 #: code:addons/website/static/src/js/tours/tour_utils.js:0
 #, python-format
 msgid ""
-"Drag the <b>${snippet.name}</b> building block and drop it in your page."
+"Drag the <b>%s</b> building block and drop it at the bottom of your page."
 msgstr ""
 
 #. module: website
@@ -3847,7 +3852,7 @@ msgstr "Harta Google"
 #: code:addons/website/static/src/js/editor/snippets.editor.js:0
 #, python-format
 msgid "Google Map API Key"
-msgstr ""
+msgstr "Google Map API Key"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_res_config_settings__has_google_maps
@@ -7035,6 +7040,13 @@ msgid "Switch Theme"
 msgstr "Schimbă Tema"
 
 #. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/theme_preview.xml:0
+#, python-format
+msgid "TIP: Follow the"
+msgstr ""
+
+#. module: website
 #: model_terms:ir.ui.view,arch_db:website.user_navbar
 msgid "TRANSLATE"
 msgstr "TRADUCE"
@@ -9232,6 +9244,13 @@ msgstr "theme.ir.ui.view"
 #, python-format
 msgid "this page"
 msgstr "această pagină"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/theme_preview.xml:0
+#, python-format
+msgid "to build the perfect page in 5 steps."
+msgstr ""
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets

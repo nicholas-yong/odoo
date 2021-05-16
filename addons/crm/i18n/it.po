@@ -424,7 +424,7 @@ msgstr "Modello con alias"
 #: code:addons/crm/static/src/js/tours/crm.js:0
 #, python-format
 msgid "All set. Let’s <b>Schedule</b> it."
-msgstr "È tutto impostato, procediamo. <b>Programma</b> l'attività."
+msgstr "È tutto pronto, procediamo. <b>Programma</b> l'attività."
 
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.crm_lead_view_form
@@ -1298,6 +1298,12 @@ msgid "From %(source_name)s : %(source_subject)s"
 msgstr ""
 
 #. module: crm
+#: code:addons/crm/models/crm_lead.py:0
+#, python-format
+msgid "From %(source_name)s"
+msgstr ""
+
+#. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 #: model_terms:ir.ui.view,arch_db:crm.view_crm_case_my_activities_filter
 #: model_terms:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
@@ -1504,7 +1510,7 @@ msgstr "È una fase vinta?"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead__is_automated_probability
 msgid "Is automated probability?"
-msgstr "La probabilità è automatizzata?"
+msgstr "La probabilità è automatica?"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead__function
@@ -2712,7 +2718,7 @@ msgstr "Mostrare solo le opportunità"
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.crm_lead_view_list_activities
 msgid "Snooze 7d"
-msgstr ""
+msgstr "Posticipa di 7 gg"
 
 #. module: crm
 #: model_terms:ir.actions.act_window,help:crm.crm_lost_reason_action

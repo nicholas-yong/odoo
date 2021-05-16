@@ -4,14 +4,15 @@
 # 
 # Translators:
 # 敬雲 林 <chingyun@yuanchih-consult.com>, 2020
+# 226408 台北 <226408@so8d.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-16 13:33+0000\n"
+"POT-Creation-Date: 2020-11-27 13:50+0000\n"
 "PO-Revision-Date: 2020-09-07 08:17+0000\n"
-"Last-Translator: 敬雲 林 <chingyun@yuanchih-consult.com>, 2020\n"
+"Last-Translator: 226408 台北 <226408@so8d.com>, 2021\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/odoo/teams/41243/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -420,13 +421,10 @@ msgstr "訪問警告"
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_purchase_order_line__qty_received_method
 msgid ""
-"According to product configuration, the recieved quantity can be automatically computed by mechanism :\n"
+"According to product configuration, the received quantity can be automatically computed by mechanism :\n"
 "  - Manual: the quantity is set manually on the line\n"
 "  - Stock Moves: the quantity comes from confirmed pickings\n"
 msgstr ""
-"根據產品配置，接收數量可以通過機制自動計算：\n"
-"  - 手動：數量在明細上手動設置\n"
-"  - 庫存移動：數量來自已確認的領料\n"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__message_needaction
@@ -521,7 +519,7 @@ msgstr ""
 
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_res_config_settings__group_send_reminder
-msgid "Allow automatically send email to reminde your vendor the receipt date"
+msgid "Allow automatically send email to remind your vendor the receipt date"
 msgstr ""
 
 #. module: purchase
@@ -1462,7 +1460,7 @@ msgstr ""
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_view_search
 msgid "My Orders"
-msgstr "我的銷售訂單"
+msgstr "我的訂單"
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.view_purchase_order_filter
@@ -1688,7 +1686,7 @@ msgstr "已訂購數量"
 #: model:ir.ui.menu,name:purchase.menu_procurement_management
 #: model_terms:ir.ui.view,arch_db:purchase.res_config_settings_view_form_purchase
 msgid "Orders"
-msgstr "銷售訂單"
+msgstr "訂單"
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
@@ -1930,7 +1928,7 @@ msgstr "採購訂單明細"
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_res_company__po_lock
 msgid "Purchase Order Modification"
-msgstr "銷售訂單修改"
+msgstr "採購訂單修改"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_res_config_settings__po_lock

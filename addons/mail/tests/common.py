@@ -240,7 +240,9 @@ class MockEmail(common.BaseCase):
             if content:
                 self.assertIn(content, sent_mail.body_html)
             for fname, fvalue in (fields_values or {}).items():
-                self.assertEqual(sent_mail[fname], fvalue)
+                self.assertEqual(
+                    sent_mail[fname], fvalue,
+                    'Mail: expected %s for %s, got %s' % (fvalue, fname, sent_mail[fname]))
 
     def assertNoMail(self, author, recipients, mail_message):
         try:
@@ -690,6 +692,7 @@ class MailCommon(common.SavepointCase, MailCase):
             signature='--\nErnest'
         )
         cls.partner_employee = cls.user_employee.partner_id
+        cls.partner_employee.flush()
 
     @classmethod
     def _create_portal_user(cls):
