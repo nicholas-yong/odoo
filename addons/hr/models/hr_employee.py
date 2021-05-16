@@ -117,7 +117,13 @@ class HrEmployeePrivate(models.Model):
     departure_description = fields.Text(string="Additional Information", groups="hr.group_hr_user", copy=False, tracking=True)
     departure_date = fields.Date(string="Departure Date", groups="hr.group_hr_user", copy=False, tracking=True)
     message_main_attachment_id = fields.Many2one(groups="hr.group_hr_user")
-
+    project_id = fields.Many2one( 'project.project', string= 'Attached Project', store=True )
+    hiring_manager_id = fields.Many2one(
+        'res.users', "Hiring Manager",
+        tracking=True, store=True, readonly=False) 
+    recruiter_id = fields.Many2one(
+        'res.users', "Recruiter",
+        tracking=True, store=True, readonly=False) 
     _sql_constraints = [
         ('barcode_uniq', 'unique (barcode)', "The Badge ID must be unique, this one is already assigned to another employee."),
         ('user_uniq', 'unique (user_id, company_id)', "A user cannot be linked to multiple employees in the same company.")

@@ -20,6 +20,7 @@ class Job(models.Model):
     no_of_hired_employee = fields.Integer(string='Hired Employees', copy=False,
         help='Number of hired employees for this job position during recruitment phase.')
     employee_ids = fields.One2many('hr.employee', 'job_id', string='Employees', groups='base.group_user')
+    project_id = fields.Many2one('project.project', string = "Project Attached", store=True)
     description = fields.Text(string='Job Description')
     requirements = fields.Text('Requirements')
     department_id = fields.Many2one('hr.department', string='Department', domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")

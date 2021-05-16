@@ -54,6 +54,12 @@
                                         <i class="fa fa-calendar fa-2x" role="img" aria-label="Calendar" title="Calendar"/>
                                     </p>
                                 </div>
+                                <!--File-->
+                                    <div attrs="{'invisible': [('question_type', '!=', 'upload_file')]}">
+                                    <p class="o_datetime">YYYY-MM-DD hh:mm:ss
+                                        <i class="fa fa-calendar fa-2x" role="img" aria-label="Calendar" title="Calendar"/>
+                                    </p>
+                                </div>
                                 <!-- Multiple choice: only one answer -->
                                 <div attrs="{'invisible': [('question_type', '!=', 'simple_choice')]}" role="img" aria-label="Multiple choice with one answer" title="Multiple choice with one answer">
                                     <div class="row"><i class="fa fa-circle-o  fa-lg"/> answer</div>

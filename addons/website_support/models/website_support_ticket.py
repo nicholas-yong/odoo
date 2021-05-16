@@ -98,10 +98,28 @@ class WebsiteSupportTicket(models.Model):
     sla_alert_ids = fields.Many2many('website.support.sla.alert', string="SLA Alerts",
                                      help="Keep record of SLA alerts sent so we do not resend them")
 
+    ###Fields that compute whether a ticket should be shown in the default view (depending on the logged in user)
+    is_ticket_shown = fields.Boolean(string = "Should this ticket be shown?", compute = "_compute_is_ticket_shown", store=True )
+
     @api.depends('sla_timer')
     def _compute_sla_timer_format(self):
         # Display negative hours in a positive format
         self.sla_timer_format = '{0:02.0f}:{1:02.0f}'.format(*divmod(abs(self.sla_timer) * 60, 60))
+    
+    def _compute_is_ticket_shown(self):
+        #A ticket should be shown in three instances. 
+            #(if the user is a support staff and the ticket is assigned to them)
+            #(if the user is a support director and the ticket is assigned to their department)
+            #(if the support is a Support Director)
+        self.is_ticket_shown = True
+        if self.env.user.has_group('website_support.support_staff') and self.user_id == self.env.user.id:
+            self.is_ticket_shown = True
+        elif self.env.user.has_group('website_support.support_manager') and self.user_id.id in self.category_id.cat_user_ids.ids:
+            self.is_ticket_shown = True
+        elif self.env.user.has_group('website_support.support_director'):
+            self.is_ticket_shown =  True
+        else:
+            self.is_ticket_shown =  False
 
     @api.model
     def update_sla_timer(self):

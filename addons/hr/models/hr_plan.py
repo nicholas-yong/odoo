@@ -21,6 +21,7 @@ class HrPlanActivityType(models.Model):
         ('coach', 'Coach'),
         ('manager', 'Manager'),
         ('employee', 'Employee'),
+        ('hiring_manager', 'Hiring Manager'),
         ('other', 'Other')], default='employee', string='Responsible', required=True)
     responsible_id = fields.Many2one('res.users', 'Responsible Person', help='Specific responsible of activity if not linked to the employee.')
     note = fields.Html('Note')
@@ -48,6 +49,11 @@ class HrPlanActivityType(models.Model):
             responsible = employee.user_id
             if not responsible:
                 raise UserError(_('User linked to employee %s is required.', employee.name))
+        elif self.responsible == 'hiring_manager':
+            #Check to see if the Hiring Manager exists
+            if not employee.hiring_manager_id:
+                raise UserError(_('Hiring Manager of Employee %s is not set.', employee.name))
+            responsible = employee.hiring_manager_id
         elif self.responsible == 'other':
             responsible = self.responsible_id
             if not responsible:

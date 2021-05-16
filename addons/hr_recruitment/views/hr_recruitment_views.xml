@@ -126,11 +126,13 @@
                         <field name="priority" widget="priority"/>
                         <field name="medium_id" groups="base.group_no_one" />
                         <field name="source_id"/>
+                        <field name="hiring_manager_id"/>
                     </group>
                     <group string="Job">
                         <field name="job_id"/>
                         <field name="department_id"/>
                         <field name="company_id" groups="base.group_multi_company" options='{"no_open":True}' />
+                        <field name ="project_id"/>
                     </group>
                     <group string="Contract">
                         <label for="salary_expected"/>
@@ -781,7 +783,7 @@ action = act
         name="Stages"
         parent="menu_hr_recruitment_configuration"
         action="hr_recruitment_stage_act"
-        groups="base.group_no_one"
+        groups="group_hr_recruitment_manager"
         sequence="1"/>
 
     <!-- Tag Form View -->

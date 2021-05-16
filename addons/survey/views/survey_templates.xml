@@ -85,9 +85,11 @@
     <template id="survey_fill_form" name="Survey: main page content">
         <t t-set="survey_form_readonly" t-value="answer.state == 'done'"/>
         <form role="form" method="post" t-att-name="survey.id"
+                enctype = "multipart/form-data"
                 class="d-flex flex-grow-1 align-items-center"
                 t-att-data-answer-token="answer.access_token"
                 t-att-data-survey-token="survey.access_token"
+                t-att-data-test-value = "121"
                 t-att-data-users-can-go-back="survey.users_can_go_back and not answer.is_session_answer"
                 t-att-data-session-in-progress="answer.is_session_answer"
                 t-att-data-is-start-screen="answer.state == 'new'"
@@ -99,6 +101,7 @@
                 t-att-data-selected-answers="json.dumps(selected_answers)">
             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
             <input type="hidden" name="token" t-att-value="answer.access_token" />
+            <input type="hidden" name="token2" value="121" />
             <div class="o_survey_error alert alert-danger d-none" role="alert">
                 <p>There was an error during the validation of the survey.</p>
             </div>
@@ -319,7 +322,29 @@
             <t t-if="question.question_type == 'simple_choice'"><t t-call="survey.question_simple_choice"/></t>
             <t t-if="question.question_type == 'multiple_choice'"><t t-call="survey.question_multiple_choice"/></t>
             <t t-if="question.question_type == 'matrix'"><t t-call="survey.question_matrix"/></t>
+            <t t-if="question.question_type == 'upload_file'"><t t-call="survey.question_upload_file"/></t>
             <div class="o_survey_question_error overflow-hidden border-0 py-0 px-3 alert alert-danger" role="alert"></div>
+        </div>
+    </template>
+
+     <template id="question_upload_file" name="Upload file">
+        <div class="o_survey_comment_container p-0">
+            <t t-if="user_input_line_upload_file">
+                <t t-foreach="user_input_line_upload_file" t-as="upload_file" t-if="upload_file.question_id.id == question.id">
+                    <t t-if="upload_file.file_type == 'pdf'">
+                        <a width="100px" height="100px" t-att-href="'data:application/pdf;base64,%s' % to_text(upload_file.file)" target="_blank">Telecharger</a>
+                    </t>
+                    <t t-if="upload_file.file_type == 'image'">
+                        <img width="100px" style="height: 100px;" class="img-thumbnail" t-att-src="'data:image/*;base64,%s' % to_text(upload_file.file)"/>
+                    </t>
+                </t>
+            </t>
+            <t t-else="">
+                <div class="file-field" >
+                    <input class="input-file" id="question_attachment" type="file" accept="image/*,application/pdf" t-att-name="question.id" t-att-data-question-type="question.question_type"/>
+                </div>
+                <br/>
+            </t>
         </div>
     </template>
 

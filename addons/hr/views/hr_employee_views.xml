@@ -194,6 +194,15 @@
                                     </group>
                                 </group>
                             </page>
+                            <page name="recruitment_information" string="Recruitment Information" groups = "hr.group_hr_user">
+                                <group>
+                                    <group string = 'Information' name = "recruitment_information_main">
+                                        <field name = "project_id"/>
+                                        <field name = "hiring_manager_id"/>
+                                        <field name = "recruiter_id"/>
+                                    </group>
+                                </group>
+                            </page>
                         </notebook>
 
                     </sheet>

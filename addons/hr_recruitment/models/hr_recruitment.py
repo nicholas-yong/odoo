@@ -155,6 +155,16 @@ class Applicant(models.Model):
     application_count = fields.Integer(compute='_compute_application_count', help='Applications with the same email')
     meeting_count = fields.Integer(compute='_compute_meeting_count', help='Meeting Count')
     refuse_reason_id = fields.Many2one('hr.applicant.refuse.reason', string='Refuse Reason', tracking=True)
+    project_id = fields.Many2one( 'project.project', string= 'Attached Project', store=True, default=  lambda self:self.job_id.project_id)
+    hiring_manager_id =  user_id = fields.Many2one(
+        'res.users', "Hiring Manager",
+        tracking=True, store=True, readonly=False)
+
+    @api.onchange('user_id')
+    def email_recruiters(self):
+        for rec in self:
+                self.old_user_id = self.user_id
+
 
     @api.depends('date_open', 'date_closed')
     def _compute_day(self):
@@ -288,6 +298,7 @@ class Applicant(models.Model):
             vals['date_open'] = fields.Datetime.now()
         if vals.get('email_from'):
             vals['email_from'] = vals['email_from'].strip()
+        #Send an email telling the recruiter that they've been assigned to an applicant
         return super(Applicant, self).create(vals)
 
     def write(self, vals):
@@ -376,6 +387,9 @@ class Applicant(models.Model):
                 'subtype_id': self.env['ir.model.data'].xmlid_to_res_id('mail.mt_note'),
                 'email_layout_xmlid': 'mail.mail_notification_light'
             })
+        #We only want to send the mail if the template_id isn't None
+        if applicant.stage_id.template_id.id:
+            applicant.stage_id.template_id.send_mail(self.id, True)
         return res
 
     def _creation_subtype(self):

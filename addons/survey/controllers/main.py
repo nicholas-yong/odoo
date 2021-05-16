@@ -436,6 +436,7 @@ class Survey(http.Controller):
         If the time limit is reached, errors will be skipped, answers will be ignored and
         survey state will be forced to 'done'"""
         # Survey Validation
+        print(post)
         access_data = self._get_access_data(survey_token, answer_token, ensure_token=True)
         if access_data['validity_code'] is not True:
             return {'error': access_data['validity_code']}

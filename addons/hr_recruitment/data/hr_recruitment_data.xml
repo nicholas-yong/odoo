@@ -252,6 +252,25 @@
         <field name="lang">${object.partner_id.lang or ''}</field>
     </record>
 
+<record id="email_template_applicant_assigned_recruiter" model="mail.template">
+        <field name="name">Applicant: Recruiter Assigned</field>
+        <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+        <field name="subject">Assigned To: ${ object.name | safe } </field>
+        <field name="email_to">${( object.user_id.partner_id.email or '' )| safe }</field>
+        <field name="body_html" type="html">
+<table border="0" cellpadding="0" cellspacing="0" width="590" style="background-color: white; border-collapse: collapse; margin-left: 20px;">
+    <tr>
+        <td valign="top" style="padding: 0px 10px;">
+            <div style="font-size: 13px; margin: 0px; padding: 0px;">
+            You've been assigned to handle the application of ${ object.name | safe } for the Position ${ object.job_id.name | safe }
+            </div>
+        </td>
+    </tr>
+</table></field>
+        <field name="auto_delete" eval="True"/>
+        <field name="lang">${object.partner_id.lang or ''}</field>
+    </record>
+
     <record model="hr.recruitment.degree" id="degree_graduate">
         <field name="name">Graduate</field>
         <field name="sequence">1</field>

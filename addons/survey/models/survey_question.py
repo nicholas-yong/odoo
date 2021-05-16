@@ -71,6 +71,7 @@ class SurveyQuestion(models.Model):
         help="Used on randomized sections to take X random questions from all the questions of that section.")
     # question specific
     page_id = fields.Many2one('survey.question', string='Page', compute="_compute_page_id", store=True)
+    question_attachment = fields.Binary('Question Attachment')
     question_type = fields.Selection([
         ('text_box', 'Multiple Lines Text Box'),
         ('char_box', 'Single Line Text Box'),
@@ -78,9 +79,9 @@ class SurveyQuestion(models.Model):
         ('date', 'Date'),
         ('datetime', 'Datetime'),
         ('simple_choice', 'Multiple choice: only one answer'),
+        ('upload_file', 'Upload file'),
         ('multiple_choice', 'Multiple choice: multiple answers allowed'),
-        ('matrix', 'Matrix'),
-        ('file', 'File')], string='Question Type',
+        ('matrix', 'Matrix')], string='Question Type',
         compute='_compute_question_type', readonly=False, store=True)
     is_scored_question = fields.Boolean(
         'Scored', compute='_compute_is_scored_question',
@@ -98,7 +99,6 @@ class SurveyQuestion(models.Model):
     save_as_nickname = fields.Boolean(
         "Save as user nickname", compute='_compute_save_as_nickname', readonly=False, store=True, copy=True,
         help="If checked, this option will save the user's answer as its nickname.")
-    save_as_attachment = fields.Many2one( 'ir.attachment', string = "Attachment", required = True )
     # -- simple choice / multiple choice / matrix
     suggested_answer_ids = fields.One2many(
         'survey.question.answer', 'question_id', string='Types of answers', copy=True,
@@ -262,6 +262,8 @@ class SurveyQuestion(models.Model):
                 question.is_scored_question = bool(question.answer_datetime)
             elif question.question_type == 'numerical_box' and question.answer_numerical_box:
                 question.is_scored_question = True
+            elif question.question_type == 'file':
+                question.is_scored_question = False
             elif question.question_type in ['simple_choice', 'multiple_choice']:
                 question.is_scored_question = True
             else:
@@ -301,6 +303,11 @@ class SurveyQuestion(models.Model):
                 return self._validate_choice(answer, comment)
             elif self.question_type == 'matrix':
                 return self._validate_matrix(answer)
+            elif self.question_type == 'file':
+                return self._validate_file(answer)
+        return {}
+    
+    def _validate_file(self, answer):
         return {}
 
     def _validate_char_box(self, answer):
